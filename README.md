@@ -1,2 +1,2 @@
 # aws-vlx2-infra
-aws devops project Iac repo
+aws devops project module

@@ -1,0 +1,4 @@
+AmazonEC2ContainerRegistryReadOnly
+AmazonEKS_CNI_Policy
+AmazonEKSClusterPolicy
+AmazonEKSWorkerNodePolicy 
