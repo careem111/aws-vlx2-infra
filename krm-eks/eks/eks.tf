@@ -1,6 +1,6 @@
 
 module "eks_cluster_infra" {
-    source = "github.com/modules//infra?ref=v0.0.1"
+    source = "github.com/careem111/vlx2-tform-modules/modules//infra?ref=v0.0.1"
 
     
   
