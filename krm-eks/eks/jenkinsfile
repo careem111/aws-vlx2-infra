@@ -1,0 +1,28 @@
+pipeline{
+    agent any
+
+    tools {
+        terraform 'Terraform'
+    }
+    stages{
+        stage ('Clone') {
+            steps {
+                git branch: 'dev', url: "https://github.com/careem111/aws-vlx2-infra.git"
+            }
+        }
+        stage ('Terraform init'){
+            steps {
+                dir("krm-eks") {
+                        sh 'terraform init'
+                    }
+                }
+            }
+        stage ('Terraform apply'){
+            steps {
+                dir("krm-eks") {
+                sh 'terraform apply --auto-approve'
+                    }
+                }
+            }
+    }
+}
