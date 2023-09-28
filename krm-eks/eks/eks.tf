@@ -1,6 +1,8 @@
 
 module "eks_cluster_infra" {
-    source = "../../aws-vlx2-infra/modules/infra/"
+    source = "github.com/modules//infra?ref=v0.0.1"
+
+    
   
     vpc_cidr  = "10.1.0.0/16"
     vpc_name = "vlx2-eks"
