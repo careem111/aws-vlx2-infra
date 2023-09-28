@@ -12,14 +12,14 @@ pipeline{
         }
         stage ('Terraform init'){
             steps {
-                dir("krm-eks") {
+                dir("krm-eks/eks/") {
                         sh 'terraform init'
                     }
                 }
             }
         stage ('Terraform apply'){
             steps {
-                dir("krm-eks") {
+                dir("krm-eks/eks/") {
                 sh 'terraform apply --auto-approve'
                     }
                 }
