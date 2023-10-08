@@ -22,7 +22,6 @@ resource "aws_eks_cluster" "eks" {
   version = "1.26"
 
   vpc_config {
-    vpc_id                   = module.eks_cluster_infra.vpc_id
     subnet_ids = [module.eks_cluster_infra.pub_subnet_1_id, module.eks_cluster_infra.pub_subnet_2_id]
     #pub_subnet_1_id is already exposed in the output.tf in modules, thats why we can call it here
     security_group_ids = [aws_security_group.node.id]
