@@ -3,14 +3,16 @@ resource "aws_security_group" "node" {
   description = "Allow ssh inbound traffic"
   vpc_id      =  module.eks_cluster_infra.vpc_id
 
-  ingress {description      = "ssh access to public"
+  ingress {
+    description      = "ssh access to public"
     from_port        = 22
     to_port          = 22
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
   }
   
-  ingress {description      = "access to the app"
+  ingress {
+    description      = "access to the app"
     from_port        = 30000
     to_port          = 32767
     protocol         = "tcp"
