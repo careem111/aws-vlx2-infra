@@ -28,5 +28,11 @@ pipeline{
                     }
                 }
             }
+
+        stage ('Invoke_vlx-selfnodes') {
+        steps {
+            build job: 'tform-self-nodes'
+        }
+    }
     }
 }
